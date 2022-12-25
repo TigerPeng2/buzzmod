@@ -1,6 +1,7 @@
 package com.nytigeryxp.buzzmod;
 
 import com.mojang.logging.LogUtils;
+import com.nytigeryxp.buzzmod.block.ModBlocks;
 import com.nytigeryxp.buzzmod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -43,6 +44,7 @@ public class BuzzMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
